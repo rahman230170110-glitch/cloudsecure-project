@@ -1,12 +1,11 @@
 window.addEventListener("load", () => {
-  const isSecure = window.location.protocol === "https:";
-  const status = document.getElementById("status");
+  const httpsStatus = document.getElementById("httpsStatus");
 
-  if (isSecure) {
-    status.textContent = "✅ Koneksi aman (HTTPS aktif)";
-    status.style.color = "lime";
+  if (window.location.protocol === "https:") {
+    httpsStatus.innerHTML = "✅ HTTPS Status: <span class='active'>ACTIVE</span>";
+    httpsStatus.style.color = "#64ffda";
   } else {
-    status.textContent = "⚠️ Koneksi tidak aman (gunakan HTTPS)";
-    status.style.color = "red";
+    httpsStatus.innerHTML = "⚠️ HTTPS Status: NOT SECURE";
+    httpsStatus.style.color = "red";
   }
 });

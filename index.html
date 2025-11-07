@@ -3,13 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cloud Secure Web</title>
+  <title>CloudSecure Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>☁️ Cloud Secure Web</h1>
-  <p>Website ini dilindungi dengan SSL (HTTPS) dan Firewall Cloudflare.</p>
-  <p id="status">Mengecek keamanan koneksi...</p>
+  <div class="container">
+    <h1>🔐 CloudSecure Dashboard</h1>
+
+    <div class="card">
+      <h2>Status Keamanan</h2>
+
+      <div class="status-box">
+        <p id="httpsStatus">Mengecek HTTPS...</p>
+      </div>
+
+      <div class="status-box">
+        <p>🔥 Firewall Cloudflare: <span class="active">ACTIVE</span></p>
+      </div>
+
+      <div class="status-box">
+        <p>☁️ Hosting: Netlify (SSL Let’s Encrypt)</p>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
